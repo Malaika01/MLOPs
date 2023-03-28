@@ -1,4 +1,4 @@
 Coordinates
 Elliptic curve
 numpy
-torch
+pytorch
