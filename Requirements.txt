@@ -1,4 +1,5 @@
 Python
 Coordinates
 Elliptic curve
-Math
+Numpy
+Torch
