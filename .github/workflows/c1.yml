@@ -1,9 +1,9 @@
-name: Pylint
+name: c1
 
 on: 
   push:
     branches:
-      - main
+      - person1
 
 jobs:
   build:
