@@ -3,10 +3,23 @@ name: c1
 on: 
   push:
     branches:
+      - main
       - person1
+      - person2
 
 jobs:
-  build:
+  build-main:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build
+        
+  build-person1:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/person1'
     steps:
@@ -16,6 +29,17 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
+        
+    build-person2:
+     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/person2'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build      
     
     
         
