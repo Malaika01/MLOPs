@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-main:
-    runs-on: ubuntu-latest
+    runs-on: windows
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
@@ -20,7 +20,7 @@ jobs:
         run: npm run build
         
   build-person1:
-    runs-on: ubuntu-latest
+    runs-on: windows
     if: github.ref == 'refs/heads/person1'
     steps:
       - name: Checkout code
@@ -31,7 +31,7 @@ jobs:
         run: npm run build
         
   build-person2:
-    runs-on: ubuntu-latest
+    runs-on: windows
     if: github.ref == 'refs/heads/person2'
     steps:
       - name: Checkout code
