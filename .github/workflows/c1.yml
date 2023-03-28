@@ -9,15 +9,14 @@ on:
 
 jobs:
   build-main:
-    runs-on: windows
+    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm install
       - name: Build project
-        run: npm run build
+        run: Cryptograms.py
         
   build-person1:
     runs-on: windows
