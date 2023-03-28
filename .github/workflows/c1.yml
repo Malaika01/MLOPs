@@ -30,8 +30,8 @@ jobs:
       - name: Build project
         run: npm run build
         
-    build-person2:
-     runs-on: ubuntu-latest
+ build-person2:
+    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/person2'
     steps:
       - name: Checkout code
@@ -39,7 +39,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: npm run build      
+        run: npm run build
+        
+     
     
     
         
