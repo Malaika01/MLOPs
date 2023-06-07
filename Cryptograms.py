@@ -305,7 +305,7 @@ for i in points:
     if(referencePoint == i):
         num = points.index(i)
     iteration += 1
-print("\nReference Point matches the point",num+1,"in the cycle")
+print("\nReference Point matches the point",num+1,"in the given cycle")
 
 
 # In[ ]:
